@@ -93,7 +93,9 @@ def create_expoRunner(input:schemas.ExpoRunnerCreate, db: Session = Depends(get_
 
 @app.get("/expoRunner", response_model= List[schemas.ExpoRunner],tags=["ExpoRunner"])
 def get_expoRunners(db: Session = Depends(get_db)):
+    print("Hi i like coding")
     runners = crud.get_expoRunners(db)
+    print("Still Like coding")
     return runners
 
 @app.get("/karen", response_model=schemas.Karen,tags=["Karen"])
